@@ -27,7 +27,7 @@ public class PrivateMessagesServlet extends HttpServlet {
     private void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         HttpSession session = request.getSession(false);
 
-        // if no session is open, redirect to login
+        // if no session is open, redirect to login otherwise
         if(session == null){
             RequestDispatcher view = request.getRequestDispatcher("a2.session.login.jsp");
             view.forward(request, response);
